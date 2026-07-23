@@ -1,7 +1,12 @@
-pi = 3.14159 #approximate
-diameter = float(input('Diameter of the circle: '))
+a = [1, 2, 3]
+b = [3, 2, 1]
 
-radius =  diameter/2.0
-area = pi * radius**2
+print('This is a:',a, 'and this is b:',b)
 
-print('The area of this circle is ',area)
+# The goal is to swap the lists
+t = a
+a = b
+b = t
+#or a,b= b,a (according to gemini)
+print('The lists switched. Now,')
+print("This is a':",a, "and this is b':",b)
