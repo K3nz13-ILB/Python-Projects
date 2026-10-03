@@ -1,17 +1,34 @@
-#include <iostream>
-using namespace std;
 
-int sum(int arr[], int size){
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main(){
+
+    int amount;
+    cin >> amount;
+    vector<int> num(amount);
+
+    for (int i = 0; i < amount; i++){
+        cin >> num.at(i);
+    }//input the numbers into the vector
+
     int total = 0;
-    for(int i = 0; i < size; i++){
-        total += arr[i];    
-        
+    int average;
+    for (int i = 0; i < amount; i++){
+        total += num.at(i);
     }
-    return total;
-}
+    average = total/amount;//count average
 
-int main() {
-    int arr[5] = {3, 7, 2, 8, 5};
-    cout << sum(arr, 5);
+    int aboveAverage = 0;
+    for (int i = 0; i < amount; i++){
+        if (num.at(i) > average) {
+            aboveAverage++;
+        }
+    }
+
+    cout << aboveAverage;
+    
+    
     return 0;
 }
